@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TrashInc
 {
@@ -15,6 +16,8 @@ namespace TrashInc
         public Form1()
         {
             InitializeComponent();
+            StreamReader google = new StreamReader("../../GoogleMaps.html");
+            webBrowser1.DocumentText = google.ReadToEnd();
         }
     }
 }
