@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrashInc;
 
 namespace TrashInc
 {
-    interface Obverser
+    interface Observer
     {
-        void Notify();
+        void Notify(Observable obs);
     }
 }
