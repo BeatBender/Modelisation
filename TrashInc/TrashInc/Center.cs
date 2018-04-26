@@ -8,11 +8,11 @@ namespace TrashInc
 {
     class Center : Google
     {
-        private Point centre;
+        private Point center;
 
         public void addPoint(double lat, double lon)
         {
-            centre = new Point(lat, lon);
+            center = new Point(lat, lon);
         }
     }
 }
