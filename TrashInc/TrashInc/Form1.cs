@@ -17,6 +17,8 @@ namespace TrashInc
         Worker worker2;
         Worker worker3;
 
+        Route clonableRoute;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace TrashInc
             worker1 = new Worker(driver1TabPage.Text, drv1NotifBox);
             worker2 = new Worker(driver2TabPage.Text, drv2NotifBox);
             worker3 = new Worker(driver3TabPage.Text, drv3NotifBox);
+            clonableRoute = new Route("Saguenay", 1000000, true);
 
             worker1.addObserver(worker2);
             worker1.addObserver(worker3);
@@ -39,17 +42,17 @@ namespace TrashInc
 
         private void drv1BeginBtn_Click(object sender, EventArgs e)
         {
-            worker1.BeginRoute();
+            worker1.BeginRoute(clonableRoute);
         }
 
         private void drv2BeginBtn_Click(object sender, EventArgs e)
         {
-            worker2.BeginRoute();
+            worker2.BeginRoute((Route)clonableRoute.Clone());
         }
 
         private void drv3BeginBtn_Click(object sender, EventArgs e)
         {
-            worker3.BeginRoute();
+            worker3.BeginRoute((Route)clonableRoute.Clone());
         }
 
         private void drv1EndBtn_Click(object sender, EventArgs e)

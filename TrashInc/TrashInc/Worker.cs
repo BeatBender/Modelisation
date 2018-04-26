@@ -13,6 +13,7 @@ namespace TrashInc
         List<Observer> observers;
         private string name;
         private RichTextBox notificationBox;
+        private Route currentRoute;
 
         private bool isRouteEnded = false;
 
@@ -23,14 +24,16 @@ namespace TrashInc
             this.notificationBox = notificationBox;
         }
 
-        public void BeginRoute()
+        public void BeginRoute(Route route)
         {
+            currentRoute = route;
             isRouteEnded = false;
             notifyObservers();
         }
 
         public void EndRoute()
         {
+            currentRoute = null;
             isRouteEnded = true;
             notifyObservers();
         }
