@@ -13,11 +13,17 @@ namespace TrashInc
 {
     public partial class Form1 : Form
     {
+        Facade f = new Facade();
         public Form1()
         {
             InitializeComponent();
             StreamReader google = new StreamReader("../../GoogleMaps.html");
             webBrowser1.DocumentText = google.ReadToEnd();
+            f.ajouterPointCentre(0, 180);
+            f.ajouterPointChemin(0, 180);
+            
         }
+
+        //
     }
 }
