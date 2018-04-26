@@ -40,8 +40,8 @@ namespace TrashInc
             worker3.addObserver(worker1);
             worker3.addObserver(worker2);
 
-            f.ajouterPointCentre(0, 180);
-            f.ajouterPointChemin(0, 180);
+            f.addPointCenter(0, 180);
+            f.addPointRoute(0, 180);
         }
 
         private void drv1BeginBtn_Click(object sender, EventArgs e)

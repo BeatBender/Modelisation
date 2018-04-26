@@ -17,12 +17,12 @@ namespace TrashInc
             center = new Center();
         }
 
-       public void ajouterPointChemin(double lat,double lon)
+       public void addPointRoute(double lat,double lon)
         {
             route.addPoint(lat, lon);
         }
 
-        public void ajouterPointCentre(double lat,double lon)
+        public void addPointCenter(double lat,double lon)
         {
             center.addPoint(lat,lon);
         }
