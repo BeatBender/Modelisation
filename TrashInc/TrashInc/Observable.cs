@@ -9,8 +9,8 @@ namespace TrashInc
 {
     interface Observable
     {
-        void addObserver(Obverser observer);
-        void removeObserver(Obverser observer);
+        void addObserver(Observer observer);
+        void removeObserver(Observer observer);
         void notifyObservers();
     }
 }
