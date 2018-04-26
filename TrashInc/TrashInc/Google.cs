@@ -8,6 +8,6 @@ namespace TrashInc
 {
     interface Google
     {
-        void ajouterPoint(double lat, double lon);
+        void addPoint(double lat, double lon);
     }
 }

@@ -8,23 +8,23 @@ namespace TrashInc
 {
     class Facade
     {
-       private Google chem;
-       private Google cen;
+       private Google route;
+       private Google center;
 
        public Facade()
         {
-            chem = new Chemin();
-            cen = new Centre();
+            route = new Route();
+            center = new Center();
         }
 
        public void ajouterPointChemin(double lat,double lon)
         {
-            chem.ajouterPoint(lat, lon);
+            route.addPoint(lat, lon);
         }
 
         public void ajouterPointCentre(double lat,double lon)
         {
-            cen.ajouterPoint(lat,lon);
+            center.addPoint(lat,lon);
         }
     }
 }

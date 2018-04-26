@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TrashInc
 {
-    class Centre : Google
+    class Center : Google
     {
         private Point centre;
 
-        public void ajouterPoint(double lat, double lon)
+        public void addPoint(double lat, double lon)
         {
             centre = new Point(lat, lon);
         }
